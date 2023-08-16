@@ -18,7 +18,9 @@ interface Products {
   title: string,
   price: number,
   description: string,
-  image: object,
+  image: {
+    url: string
+  },
   quantity: number,
   category: string
 }
@@ -120,7 +122,7 @@ const Products: React.FC = () => {
       message.error(err.response ? err.response.data.msg : "Timeout");
     }
   };
-  async function editProduct(id: string) {
+  async function editProduct(id: any) {
     setSelected(id);
     try {
       const { data } = await request.get(`product/${id}`);

@@ -17,8 +17,10 @@ import { CategoryTypes } from '@/types';
 interface Category {
   _id: string; 
   name: string;
-  image: string;
-  url: any;
+  image: {
+    url: string;
+  };
+  
 }
 
 
@@ -27,7 +29,7 @@ const Dashboard: React.FC = () => {
   const [categories, setCategories] = useState<Category[]>([]);
   const [loading, setLoading] = useState<boolean>(false);
   const [isModalVisible, setIsModalVisible] = useState<boolean>(false);
-  const [selected, setSelected] = useState(false);
+  const [selected, setSelected] = useState(null);
   const [form] = Form.useForm();
   
   
@@ -110,7 +112,7 @@ const Dashboard: React.FC = () => {
       message.error(err.response ? err.response.data.msg : "Timeout");
     }
   };
-  async function editCategory(id: string) {
+  async function editCategory(id: any) {
     setSelected(id);
     try {
       const { data } = await request.get(`category/${id}`);
