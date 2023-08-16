@@ -141,7 +141,7 @@ const Dashboard: React.FC = () => {
         <h1>Categories</h1>
         <Button type='primary' icon={<FolderAddOutlined />} size='large' style={{boxShadow: '0px 5px 5px -5px rgba(34, 60, 80, 0.6)'}} onClick={showModal}>Add Category</Button>
       </div>
-      {loading ? <div><Loading/></div> : <div style={{display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', rowGap: '30px', placeItems: 'center'}}>
+      {loading ? <div><Loading/></div> : <div className='categories__res' style={{display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', rowGap: '30px', placeItems: 'center'}}>
         {categories.map((res) => (
           <div className="card" key={res._id} >
           <div className="card-img" style={{background: `url(${res?.image?.url}) center center`, backgroundSize: 'cover'}} >
