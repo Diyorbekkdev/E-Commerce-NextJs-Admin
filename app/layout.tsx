@@ -12,10 +12,10 @@ import "../globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export const metadata = {
-  title: "E-commerce",
-  description: "E-commerce site for shops",
-};
+// export const metadata = {
+//   title: "E-commerce",
+//   description: "E-commerce site for shops",
+// };
 
 export default function RootLayout({ children }: LayoutType) {
   return (
