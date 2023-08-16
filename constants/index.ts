@@ -1,0 +1,1 @@
+export const TOKEN = 'E-COMMERCE-TOKEN'

@@ -1,0 +1,36 @@
+.ant-layout-sider {
+    height: 100vh;
+}
+
+.ant-layout-content {
+    margin: 0 !important;
+    height: calc(100vh - 64px);
+    overflow: scroll;
+}
+.ant-menu-title-content{
+    font-weight: bold !important;
+}
+.anticon{
+    font-size: 20px !important;
+}
+.ant-pagination {
+    margin: 20px auto !important;
+    justify-content: center !important;
+}
+
+main::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+  }
+  
+  main::-webkit-scrollbar-thumb {
+    background-color: #4a90e2; /* Color of the scrollbar thumb */
+    border-radius: 5px; /* Rounded corners */
+  }
+  
+  main::-webkit-scrollbar-thumb:hover {
+    background-color: #3579bd; /* Color of the scrollbar thumb on hover */
+  }
+  
+  main::-webkit-scrollbar-track {
+    background-color: #2a485f; /* Color of the scrollbar track */
+  }
