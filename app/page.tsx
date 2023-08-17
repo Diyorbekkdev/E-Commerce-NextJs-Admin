@@ -50,9 +50,9 @@ const Login: React.FC<LoginProps> = () => {
   };
 
   return (
-    <div className="rounded mb-6 pt-36">
+    <div className="rounded mb-6 pt-36 main_login">
       <h2 className="containr text-center text-white text-4xl py-5 font-semibold">
-        Login
+        Login as Administrator
       </h2>
       <div className="containr register p-10 bg-white bg-opacity-20 backdrop-blur-md rounded-md lg:px-40 md:px-20 xl:w-[50%] md:w-[80%] m-auto">
         <Form
@@ -89,6 +89,7 @@ const Login: React.FC<LoginProps> = () => {
 
           <Button
             loading={loading}
+            type="primary"
             htmlType="submit"
             className="bg-white mx-auto w-1/3 my-3 h-10 text-lg "
           >
